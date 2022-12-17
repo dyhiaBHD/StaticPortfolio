@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@700&display=swap');
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+html {
+  scroll-behavior: smooth;
+
+}
+
+/****************  Carla-codes https://github.com/Carla-Codes/starry-night-css-animation thank you.       *************/ 
+* {
+  margin: 0;
+  padding: 0;
+}
+.maindiv{
+  color:#C0C0C0;
+  padding: 3%;
+  padding-top: 6%;
+  border:3px dashed #C0C0C0;
+}
+.maindiv,#rocket,#meteor,.progress-container{
+  display:block;
+    position: relative;
+    z-index: 3;
+}@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+width:100%;
+height:100%;
+display:block;
+}
+
+body {
+background:#000 url(../BGimages/stars.png) repeat top center;
+font-family: 'Expletus Sans', cursive;
+z-index:0;
+}
+
+.twinkling{
+background:transparent url(../BGimages/twinkling.png) repeat top center;
+z-index:1;
+animation:move-twink-back 200s linear infinite;
+}
+
+
+#rocket{
+
+  font-size: 1.5rem;
+}
+#meteor{
+  color:#F53803;
+  margin-top: 50%;
+  font-size: 1.5rem;
+}
+
+/**************************/
+
+
+
+
+
+
+.BigTitle{
+  font-family: 'Expletus Sans', cursive;
+  font-size: 100px;
+ 
+   
+  
+ 
+}
+
+.description1{
+  font-family: 'Expletus Sans', cursive;
+  font-size: 20px;
+}
+/*** w3school glow ***/
+.glow{
+  color:#F53803;
+  animation: glow 2s ease-in-out infinite alternate;
+ 
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 5px rgb(255, 255, 255), 0 0 10px #e66400, 0 0 40px #C0C0C0, 0 0 50px #C0C0C0, 0 0 60px #C0C0C0, 0 0 70px #e66400;
+  }
+  
+  to {
+    text-shadow: 0 0 8px #fff, 0 0 10px #e66400, 0 0 15px #C0C0C0, 0 0 45px #e66400, 0 0 55px #C0C0C0, 0 0 65px #C0C0C0, 0 0 77px #C0C0C0;
+  }
+}
+/*** end of w3school glow ***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************ cards  https://codepen.io/drehimself/pen/azBmdK Andre madarang ****************************/
+a:hover {
+  text-decoration: underline;
+}
+
+.movie-card {
+  
+  color: #111110;
+
+  padding: 40px 0;
+  min-height: 500px;
+}
+/*
+.container1:hover{
+  box-shadow: #F53803 -3px -3px;
+}
+.container1 {
+  margin: 0 auto;
+  width: 100%;
+  height: 640px;
+  background: #F0F0ED;
+  border-radius: 5px;
+  position: relative;
+}*/
+.mybg{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.26);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+border: 1px solid rgba(255, 255, 255, 0.75);
+/*
+width: 70%;
+margin:0 auto;*/
+height: fit-content;
+padding:0px;
+border-radius: 5px;
+position: relative;
+}
+.hero {
+  height: 342px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.hero:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: red;
+ /*background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg");*/
+ background: var(--bg-proj) center top ;
+ filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
+  z-index: -1;
+  transform: skewY(-2.2deg);
+  transform-origin: 0 0;
+ 
+}
+.fa-play{
+  font-size: 30px;
+  color:#17141d
+}
+.cover {
+  border-radius: 50%;
+  background-image: linear-gradient(to right top, #f5d020, #f9b800, #fb9f00, #fb8500, #f96900, #f85b00, #f74b00, #f53803, #f53803, #f53803, #f53803, #f53803);
+  padding: 30px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 300px;
+  left: 40px;
+  z-index: 2;
+}
+
+.details {
+  padding: 190px 0 0 280px;
+ 
+}
+.projTitle {
+
+ color:#F53803;
+
+  font-size: 44px;
+  margin-bottom: 13px;
+ 
+}
+.details .title1 span {
+  position: absolute;
+  top: 3px;
+  margin-left: 12px;
+  background: #C4AF3D;
+  border-radius: 5px;
+  color: #544C21;
+  font-size: 14px;
+  padding: 0px 4px;
+}
+.details .title2 {
+  color: #C7C1BA;
+  font-size: 23px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.paragraphFunct{height:fit-content;font-size: 18px;
+
+}
+.description {
+  bottom: 0px;
+  height: fit-content;
+  
+  line-height: 26px;
+  color: #B1B0AC;
+}
+
+.column1 {
+ 
+  padding-top: 50px;
+
+  text-align: center;
+}
+
+.tag {
+  background: white;
+  border-radius: 10px;
+  padding: 3px 8px;
+  font-size: 14px;
+  margin-right: 4px;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background: #ddd;
+}
+
+.column2 {
+  padding-top: 30px;
+  padding-left: 30px;
+
+
+}
+
+
+
+fieldset, label {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+a[data-tooltip] {
+  position: relative;
+}
+
+a[data-tooltip]::before,
+a[data-tooltip]::after {
+  position: absolute;
+  display: none;
+  opacity: 0.85;
+}
+
+a[data-tooltip]::before {
+  /*
+   * using data-tooltip instead of title so we 
+   * don't have the real tooltip overlapping
+   */
+  content: attr(data-tooltip);
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  padding: 5px;
+  border-radius: 5px;
+  /* we don't want the text to wrap */
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+a[data-tooltip]::after {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  content: "";
+}
+
+a[data-tooltip]:hover::before,
+a[data-tooltip]:hover::after {
+  display: block;
+}
+
+/** positioning **/
+/* top tooltip */
+a[data-tooltip][data-placement=top]::before {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 40px;
+}
+
+a[data-tooltip][data-placement=top]::after {
+  border-top-color: #000;
+  border-bottom: none;
+  bottom: 50px;
+  left: 20px;
+  margin-bottom: 4px;
+}
+/******************** fin cards ******************/
+
+
+
+
+
+/**************** progress bar andre cadent ******************/
+
+
+
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(calc(-50% + 3px), calc(50vh - 50%)) rotate(90deg);
+  width: 100vh;
+  height: 6px;
+  z-index: 5;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #f5f5f5;
+
+}
+
+progress[value="100"]::-webkit-progress-bar {
+  background-color: #e74403;
+}
+
+progress::-webkit-progress-value {
+  background-color: #e74403;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/********************* fin code progress bar ***************/
+
+
+/************** slide *****************/
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slideProj{
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: slideInLeft;
+}
+.hideoverlow{
+  overflow: hidden;
+}
+/****************** end slide ****************/
+
+
+
+
+
+/***************************** code pour carte dans details wiliam goldsworthy https://codepen.io/william-goldsworthy/pen/JzVajj ***********/
+.cont1 {
+ 
+  top: 60px;
+  margin-left: 15%;
+}
+
+.detCard {
+
+  height: 400px;
+ 
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.detCard:not(:first-child) {
+    margin-left: -50px;
+}
+
+.detCard:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.detCard:hover ~ .detCard {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.detTitle {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.detBar {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  height: 5px;
+  width: 80%;
+}
+
+.emptydetBar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filleddetBar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(to right top, #f5d020, #f9b800, #fb9f00, #fb8500, #f96900, #f85b00, #f74b00, #f53803, #f53803, #f53803, #f53803, #f53803);
+  transition: 0.6s ease-out;
+}
+
+.detCard:hover .filleddetBar {
+  width: 70%;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 20px;
+
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+
+
+.detCard:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+/*********** fin code carte dans details *************/
+
+
+/******** hide google tranlator span *******/
+#google_translate_element select{
+    background:#F53803;
+    float: right;
+    color:whitesmoke;
+    border: none;
+    border-radius:5px;
+    padding:6px 8px
+    }
+    .goog-logo-link, .goog-te-banner-frame,#goog-gt-tt, .goog-te-balloon-frame{
+      display:none!important;
+     }
+    .goog-te-gadget{
+    color:transparent!important;
+    } 
+   
+    
+   
+   .goog-text-highlight { background: none !important; box-shadow: none !important;}
+
+
+   /*************************** slidewhos ************************/
+   /* Position the image container (needed to position the left and right arrows) */
+
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    text-align: center;
+  }
+  
+  .mySlides img {
+    max-height: 300px;
+   
+  }
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+    max-height: 100px;
+    min-height: 100px;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    background-color: #ecdfdf;
+    color:  #111110;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    color: #ecdfdf; background-color: #111110;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #ecdfdf;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background-color: #111110;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+
+
+  /********************* modal *********************************/
+  .modal-dialog{
+    height: 1000px;
+
+  }
+  .modal-content{
+    height: 100%;
+  }
+  /********************** end modal **********************/
+
+  .mycontainer{
+    max-width: 80%;
+   
+  }
