@@ -62,7 +62,7 @@
 
                   </a>
                   <div class="hero"
-                    style="--bg-proj:url('../Projects/warehouseReceiving/images/chats.png')"> </div>
+                    style="--bg-proj:url('../Projects/warehouseReceiving/images/dashboard.PNG')"> </div>
                   <!-- end hero -->
                   <div class="description row">
                     <div class="column1 col-lg-3 col-md-3 col-sm-6"> <span class="tag"> Node.Js</span> <span
@@ -398,8 +398,21 @@
       value="0"></progress>
   </body>
   <script src="./JS/slide.js"></script>
-  <script src="./JS/scroll.js"></script>
-  <script src="./js/modals.js"></script>
 
+  <script src="./JS/modals.js"></script>
+  <script>
+    /************ https://codepen.io/arnedecant/pen/OeZJqQ arne decant **************/
+    const progressbar = document.querySelector('progress');
+    let isScrolling = false;
+    document.addEventListener('scroll', e => isScrolling = true);
+    render();
+
+    function render() {
+      requestAnimationFrame(render);
+      if (!isScrolling) return;
+      progressbar.value = window.scrollY / (document.body.offsetHeight - window.innerHeight) * 100;
+      isScrolling = false;
+    } 
+  </script>
 
 </html>

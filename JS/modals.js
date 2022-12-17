@@ -1,5 +1,5 @@
 let images = {
-    'receiving': ['./Projects/warehouseReceiving/images/dashboard.png', './Projects/warehouseReceiving/images/stripe.png', './Projects/warehouseReceiving/images/chats.png', './Projects/warehouseReceiving/images/bonnereception.png'],
+    'receiving': ['./Projects/warehouseReceiving/images/dashboard.PNG', './Projects/warehouseReceiving/images/stripe.PNG', './Projects/warehouseReceiving/images/chats.PNG', './Projects/warehouseReceiving/images/bonnereception.PNG'],
     'Library': ['./Projects/Library/images/acccueil.png', './Projects/Library/images/listelivres.png', './Projects/Library/images/listememebres.png', './Projects/Library/images/responsive accueil.png'],
     'Movies': ['./Projects/Movies/images/catalogue.png', './Projects/Movies/images/desktopstat.png', './Projects/Movies/images/home.png', './Projects/Movies/images/panier.png', './Projects/Movies/images/desktopajouterfilms.png'],
     'Meteo': ['./Projects/weather/images/london landscape.png', './Projects/weather/images/madrid landscape.png', './Projects/weather/images/montreal.png', './Projects/weather/images/paris.png', './Projects/weather/images/responsive paris.png'],
