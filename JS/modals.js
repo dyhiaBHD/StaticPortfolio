@@ -16,10 +16,23 @@ let videos = {
     'Phone': ['./Projects/ecommerce/video/ecommerce.mp4'],
     'Task': ['./Projects/Tasks/video/todo tasks.mp4']
 }
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+
 $(".openmodel").click(function (event) {
+    const swiper = new Swiper('.swiper', {
+        speed: 400,
+        spaceBetween: 100,
+        observer: true,
+        initialSlide: 1,
+        observeParents: true,
+        parallax: true,
+
+
+    });
+
     var recipient = $(this).attr('data-whatever');
     var modal = $('#exampleModal');
-    array = images[recipient];
+    var array = images[recipient];
     console.log(array)
     document.querySelectorAll('.mySlides img').forEach((x, i) => {
         x.setAttribute('src', array[i])
@@ -30,7 +43,7 @@ $(".openmodel").click(function (event) {
     array.forEach(element => {
         console.log(element)
     });
-    videoSRCauto = videos[recipient] + "";
+    var videoSRCauto = videos[recipient] + "";
     modal.find('#videosrc').attr('src', videoSRCauto)
     modal.find('.video')[0].load();
     $("#exampleModal").modal();

@@ -2,6 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
 html {
   scroll-behavior: smooth;
 
@@ -16,7 +17,7 @@ html {
   color:#C0C0C0;
   padding: 3%;
   padding-top: 6%;
-  border:3px dashed #C0C0C0;
+  
 }
 .maindiv,#rocket,#meteor,.progress-container{
   display:block;
@@ -61,7 +62,7 @@ animation:move-twink-back 200s linear infinite;
   font-size: 1.5rem;
 }
 #meteor{
-  color:#F53803;
+  color:#750266;
   margin-top: 50%;
   font-size: 1.5rem;
 }
@@ -88,17 +89,19 @@ animation:move-twink-back 200s linear infinite;
 }
 /*** w3school glow ***/
 .glow{
-  color:#F53803;
+  color:#750266;
   animation: glow 2s ease-in-out infinite alternate;
  
 }
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 5px #fff, 0 0 5px rgb(255, 255, 255), 0 0 10px #e66400, 0 0 40px #C0C0C0, 0 0 50px #C0C0C0, 0 0 60px #C0C0C0, 0 0 70px #e66400;
+   /* text-shadow: 0 0 5px #fff, 0 0 5px rgb(255, 255, 255), 0 0 10px #e66400, 0 0 40px #C0C0C0, 0 0 50px #C0C0C0, 0 0 60px #C0C0C0, 0 0 70px #e66400;*/ 
+   text-shadow: 0 0 5px #fff, 0 0 5px rgb(255, 255, 255), 0 0 10px #91057e, 0 0 40px #C0C0C0, 0 0 50px #C0C0C0, 0 0 60px #C0C0C0, 0 0 70px #91057e;
   }
   
   to {
-    text-shadow: 0 0 8px #fff, 0 0 10px #e66400, 0 0 15px #C0C0C0, 0 0 45px #e66400, 0 0 55px #C0C0C0, 0 0 65px #C0C0C0, 0 0 77px #C0C0C0;
+   /* text-shadow: 0 0 8px #fff, 0 0 10px #e66400, 0 0 15px #C0C0C0, 0 0 45px #e66400, 0 0 55px #C0C0C0, 0 0 65px #C0C0C0, 0 0 77px #C0C0C0;*/
+   text-shadow: 0 0 8px #fff, 0 0 10px #91057e, 0 0 15px #C0C0C0, 0 0 45px #91057e, 0 0 55px #C0C0C0, 0 0 65px #C0C0C0, 0 0 77px #C0C0C0;
   }
 }
 /*** end of w3school glow ***/
@@ -130,7 +133,7 @@ a:hover {
 }
 /*
 .container1:hover{
-  box-shadow: #F53803 -3px -3px;
+  box-shadow: #750266 -3px -3px;
 }
 .container1 {
   margin: 0 auto;
@@ -175,11 +178,15 @@ position: relative;
   left: 0;
   background: red;
  /*background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg");*/
- background: var(--bg-proj) center top ;
+ background: var(--bg-proj) center center ;
  filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
   z-index: -1;
   transform: skewY(-2.2deg);
   transform-origin: 0 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
  
 }
 .fa-play{
@@ -188,7 +195,8 @@ position: relative;
 }
 .cover {
   border-radius: 50%;
-  background-image: linear-gradient(to right top, #f5d020, #f9b800, #fb9f00, #fb8500, #f96900, #f85b00, #f74b00, #f53803, #f53803, #f53803, #f53803, #f53803);
+  /*background-image: linear-gradient(to right top, #f5d020, #f9b800, #fb9f00, #fb8500, #f96900, #f85b00, #f74b00, #F53803, #F53803, #F53803,#F53803, #F53803);*/
+  background-image: linear-gradient(to right top, #b220f5, #ba2adf, #9a05b8, #b4079d, #85069e, #73048a);
   padding: 30px;
   width: 80px;
   height: 80px;
@@ -204,7 +212,7 @@ position: relative;
 }
 .projTitle {
 
- color:#F53803;
+ color:#884f80;
 
   font-size: 44px;
   margin-bottom: 13px;
@@ -227,8 +235,22 @@ position: relative;
   margin-bottom: 15px;
 }
 
-.paragraphFunct{height:fit-content;font-size: 18px;
-
+.paragraphFunct{max-height: 300px;font-size: 18px;overflow-y: auto;
+ 
+}
+@media (max-width: 576px){
+  .paragraphFunct{
+    max-height: 150px;
+  }
+  .projTitle{
+    font-size: 20px;
+  }
+  .BigTitle{
+   font-size: 50px;
+  }
+  .meteor{
+    display: none;
+  }
 }
 .description {
   bottom: 0px;
@@ -239,20 +261,22 @@ position: relative;
 }
 
 .column1 {
- 
+  margin: auto;
   padding-top: 50px;
 
   text-align: center;
 }
 
 .tag {
-  background: white;
+  
   border-radius: 10px;
   padding: 3px 8px;
   font-size: 14px;
   margin-right: 4px;
   line-height: 35px;
   cursor: pointer;
+  border:1px solid rgb(239, 217, 250);
+  height: fit-content;
 }
 
 .tag:hover {
@@ -362,11 +386,11 @@ progress::-webkit-progress-bar {
 }
 
 progress[value="100"]::-webkit-progress-bar {
-  background-color: #e74403;
+  background-color: #700559;
 }
 
 progress::-webkit-progress-value {
-  background-color: #e74403;
+  background-color: #700559;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -462,8 +486,8 @@ progress::-webkit-progress-value {
   z-index: 3;
   width: 0px;
   height: 100%;
-  background: rgb(0,154,217);
-  background: linear-gradient(to right top, #f5d020, #f9b800, #fb9f00, #fb8500, #f96900, #f85b00, #f74b00, #f53803, #f53803, #f53803, #f53803, #f53803);
+  background: rgb(122, 4, 103);
+  background: linear-gradient(to right top, #b573f3, #ce6df5, #c553f1, #8425dd, #9006b9, #a006a0, #960596, #7306c1, #7306c1, #7306c1, #7306c1, #7306c1);
   transition: 0.6s ease-out;
 }
 
@@ -494,112 +518,22 @@ progress::-webkit-progress-value {
 /*********** fin code carte dans details *************/
 
 
-/******** hide google tranlator span *******/
+/******** google tranlator span *******/
 #google_translate_element select{
-    background:#F53803;
+    background:#750266;
     float: right;
     color:whitesmoke;
     border: none;
     border-radius:5px;
     padding:6px 8px
     }
-    .goog-logo-link, .goog-te-banner-frame,#goog-gt-tt, .goog-te-balloon-frame{
-      display:none!important;
-     }
-    .goog-te-gadget{
-    color:transparent!important;
-    } 
-   
+    
     
    
-   .goog-text-highlight { background: none !important; box-shadow: none !important;}
+ 
 
 
-   /*************************** slidewhos ************************/
-   /* Position the image container (needed to position the left and right arrows) */
-
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-    text-align: center;
-  }
-  
-  .mySlides img {
-    max-height: 300px;
-   
-  }
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
-    cursor: pointer;
-    max-height: 100px;
-    min-height: 100px;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    background-color: #ecdfdf;
-    color:  #111110;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    color: #ecdfdf; background-color: #111110;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #ecdfdf;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-    background-color: #111110;
-  }
-  
-  /* Container for image text */
-  .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-
-  /* Six columns side by side */
-  .column {
-    float: left;
-    width: 16.66%;
-  }
-  
-  /* Add a transparency effect for thumnbail images */
-  .demo {
-    opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
-    opacity: 1;
-  }
+  /**** google end *****/
 
 
 
@@ -609,11 +543,28 @@ progress::-webkit-progress-value {
 
   }
   .modal-content{
-    height: 100%;
+    height: fit-content;
   }
   /********************** end modal **********************/
 
   .mycontainer{
-    max-width: 80%;
+    max-width: 90%;
    
+  }
+
+
+  /******* swiper ***************/
+  .swiper{
+    margin-bottom:30px;
+    background-color:#8e8b8b8c;
+  }
+  .swiper-slide {
+
+    height: 400px;
+  }
+  .swiper-slide img {
+    display: block;
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
   }
